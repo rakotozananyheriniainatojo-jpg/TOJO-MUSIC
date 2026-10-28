@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="mg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101018">
+<title>TOJO MUSIC — Mozika mampifandray</title>
+<style>
+:root{--bg:#0b0b12;--panel:#151521;--panel2:#1d1d2b;--text:#f6f4ff;--muted:#aaa8bd;--accent:#ffb52e;--accent2:#ff5d70;--line:#303044}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#29203c 0,transparent 38%),var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 18px}
+header{position:sticky;top:0;z-index:5;background:#0b0b12ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-size:1.28rem;font-weight:900;letter-spacing:.7px}.logo span{color:var(--accent)}
+nav{display:flex;gap:18px;color:var(--muted);font-size:.94rem}nav a{text-decoration:none}
+.btn{border:0;border-radius:12px;padding:11px 15px;background:var(--accent);color:#211500;font-weight:800;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.secondary{background:var(--panel2);color:var(--text);border:1px solid var(--line)}
+.hero{padding:44px 0 26px;display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:center}
+.kicker{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.75rem}
+h1{font-size:clamp(2.3rem,6vw,4.6rem);line-height:1.02;margin:10px 0 16px;letter-spacing:-2px}
+h1 em{color:var(--accent);font-style:normal}.hero p{color:var(--muted);max-width:600px}
+.hero-art{min-height:250px;border:1px solid #4c3a53;border-radius:26px;padding:22px;background:linear-gradient(140deg,#49213b,#1b1b30 55%,#5c421c);display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 20px 70px #0005}
+.disc{width:145px;height:145px;border-radius:50%;margin:auto;background:repeating-radial-gradient(circle,#15151f 0 8px,#292938 9px 12px);display:grid;place-items:center;border:8px solid #252535;box-shadow:0 0 0 2px #ffb52e}.disc:after{content:"TM";display:grid;place-items:center;background:var(--accent);color:#211500;font-weight:1000;border-radius:50%;width:42px;height:42px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:30px 0 14px}.section-head h2{margin:0;font-size:1.45rem}.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:14px;min-width:0}
+.cover{aspect-ratio:1.35/1;border-radius:13px;display:grid;place-items:center;font-size:2.8rem;background:linear-gradient(135deg,#61374b,#e2a34b);margin-bottom:12px}
+.cover.two{background:linear-gradient(135deg,#1c6874,#26304e)}.cover.three{background:linear-gradient(135deg,#5e3b8b,#cf5e65)}
+.card h3{margin:0 0 2px;font-size:1.05rem}.artist{color:var(--muted);font-size:.9rem}
+.player{display:flex;align-items:center;gap:9px;margin-top:12px}.play{border:0;border-radius:50%;width:38px;height:38px;background:var(--accent);font-weight:900;cursor:pointer}
+.trackline{height:5px;background:#38384a;border-radius:9px;flex:1;overflow:hidden}.trackline span{display:block;height:100%;width:0;background:var(--accent)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.pill{background:#252536;border:1px solid var(--line);color:var(--text);border-radius:20px;padding:6px 10px;cursor:pointer}.pill.active{border-color:var(--accent);color:var(--accent)}
+.uploadbox{border:1px dashed #59566d;border-radius:18px;padding:20px;background:#12121c}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{font-size:.88rem;color:var(--muted);display:block;margin-bottom:5px}input,select,textarea{width:100%;background:#0c0c14;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px;font:inherit}textarea{min-height:80px;resize:vertical}.full{grid-column:1/-1}
+.comment{border-top:1px solid var(--line);margin-top:12px;padding-top:12px}.comment input{margin-top:8px}
+footer{border-top:1px solid var(--line);margin-top:45px;padding:25px 0;color:var(--muted);font-size:.9rem}
+.notice{background:#302615;border:1px solid #745520;color:#ffe1a0;padding:12px 14px;border-radius:12px;font-size:.9rem;margin-top:18px}
+@media(max-width:760px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:30px}.hero-art{min-height:200px}.grid{grid-template-columns:1fr 1fr}h1{letter-spacing:-1px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.nav{height:62px}.hero{gap:15px}form{grid-template-columns:1fr}.full{grid-column:auto}.section-head{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><div class="logo">TOJO <span>MUSIC</span></div><nav><a href="#hira">Hira</a><a href="#clip">Clip</a><a href="#mpakatra">Mampakatra</a></nav><a class="btn" href="#mpakatra">+ Hira</a></div></header>
+<main class="wrap">
+<section class="hero">
+<div><div class="kicker">Mozika Malagasy • Community</div><h1>Henoy. Zarao.<br><em>Miara-mamorona.</em></h1><p>Toerana iray hihaonan'ny mpanakanto sy ny mpankafy mozika. Hira, clip, commentaires ary réactions — amin'ny toerana iray.</p><a class="btn" href="#hira">Hitady hira</a> <a class="btn secondary" href="#mpakatra">Hampakatra hira</a></div>
+<div class="hero-art"><div class="kicker">Ny feo mampiray antsika</div><div class="disc"></div><div><strong>TOJO MUSIC</strong><div class="muted">Ny sehatra mozika Malagasy</div></div></div>
+</section>
+<div class="notice"><strong>Prototype/demo:</strong> mbola tsy tranonkala mivantana ity. Ny hira ampidirinao eto dia ao amin'ity navigateur ity ihany; tsy mbola zaraina amin'ny Internet. Mila backend sy hosting isika vao afaka mampiasa kaonty, upload tena izy ary commentaires ho an'ny rehetra.</div>
+<section id="hira">
+<div class="section-head"><div><div class="kicker">Ho hitanao eto</div><h2>Hira nasongadina</h2></div><span class="muted">Demo preview</span></div>
+<div class="grid" id="tracks">
+<article class="card" data-title="Tojo Boto Fahiny"><div class="cover">🎙️</div><h3>Tojo Boto Fahiny</h3><div class="artist">Tojo McBride • Hira nasongadina</div><div class="player"><button class="play" aria-label="Play demo">▶</button><div class="trackline"><span></span></div><small>MP3</small></div><div class="actions"><button class="pill react">❤️ <span>0</span></button><button class="pill" onclick="shareSong('Tojo Boto Fahiny')">↗ Zarao</button><button class="pill" onclick="alert('Demo: rehefa ampifandraisina amin’ny storage dia hiseho eto ny download.')">⬇ Télécharger</button></div><div class="comment"><strong>Commentaires</strong><div class="muted comments-list">Mbola tsy misy commentaire.</div><input class="comment-input" placeholder="Soraty ny hevitrao…"><button class="pill comment-send">Alefa</button></div></article>
+<article class="card"><div class="cover two">🎸</div><h3>Hira vaovao</h3><div class="artist">Anaran'ny mpanakanto</div><div class="player"><button class="play" aria-label="Play demo">▶</button><div class="trackline"><span></span></div><small>MP3</small></div><div class="actions"><button class="pill react">❤️ <span>0</span></button><button class="pill" onclick="shareSong('Hira vaovao')">↗ Zarao</button></div><div class="comment"><strong>Commentaires</strong><div class="muted comments-list">Mbola tsy misy commentaire.</div><input class="comment-input" placeholder="Soraty ny hevitrao…"><button class="pill comment-send">Alefa</button></div></article>
+<article class="card" id="clip"><div class="cover three">🎬</div><h3>Clip vidéo</h3><div class="artist">MP4 • Clip nasongadina</div><p class="muted">Azo ampiana eto ny clip rehefa misy fichier sy fitahirizana.</p><button class="pill" onclick="alert('Demo ihany: mbola tsy misy vidéo mifandray.')">▶ Hijery clip</button></article>
+</div></section>
+<section id="mpakatra">
+<div class="section-head"><div><div class="kicker">Ho an'ny mpanakanto</div><h2>Mampakatra hira (demo)</h2></div></div>
+<div class="uploadbox"><p class="muted">Fenoy ny antsipiriany. Amin'ity demo ity, ny rakitra dia aseho eo amin'ny pejy fotsiny; tsy alefa any amin'ny serveur.</p>
+<form id="uploadForm">
+<div><label for="songTitle">Lohatenin'ny hira *</label><input id="songTitle" required placeholder="Ohatra: Tojo Boto Fahiny"></div>
+<div><label for="artistName">Anaran'ny mpanakanto *</label><input id="artistName" required placeholder="Ohatra: Tojo McBride"></div>
+<div><label for="fileType">Karazana rakitra</label><select id="fileType"><option value="audio">MP3 / Audio</option><option value="video">MP4 / Vidéo</option></select></div>
+<div><label for="mediaFile">Fichier MP3 na MP4 (ho an'ny demo)</label><input id="mediaFile" type="file" accept="audio/*,video/mp4"></div>
+<div class="full"><label for="description">Mombamomba ilay hira</label><textarea id="description" placeholder="Tantara fohy momba ilay hira…"></textarea></div>
+<div class="full"><label><input id="rights" type="checkbox" required style="width:auto"> Manamarina aho fa manana zo hampakatra sy hizara ity rakitra ity.</label></div>
+<div class="full"><button class="btn" type="submit">Ampio amin'ny preview</button></div>
+</form><div id="uploadMessage" class="muted" role="status"></div></div>
+</section>
+</main>
+<footer><div class="wrap"><strong>TOJO MUSIC</strong> — Mozika mampifandray.<br>Prototype voalohany • Mila backend, login, storage ary fanamarinana fiarovana vao avoaka ho an'ny daholobe.</div></footer>
+<script>
+document.querySelectorAll('.react').forEach(b=>b.addEventListener('click',()=>{b.classList.toggle('active');let s=b.querySelector('span');s.textContent=Number(s.textContent)+(b.classList.contains('active')?1:-1)}));
+document.querySelectorAll('.comment-send').forEach(b=>b.addEventListener('click',()=>{const card=b.closest('.card'), input=card.querySelector('.comment-input'), list=card.querySelector('.comments-list');const v=input.value.trim();if(!v)return; if(list.textContent==='Mbola tsy misy commentaire.')list.textContent='';const p=document.createElement('p');p.textContent='👤 '+v;list.appendChild(p);input.value=''}));
+document.querySelectorAll('.play').forEach(b=>b.addEventListener('click',()=>alert('Demo ihany: ampifandraisina amin’ny rakitra audio tena izy ny player amin’ny dingana manaraka.')));
+function shareSong(title){if(navigator.share)navigator.share({title:'TOJO MUSIC — '+title,text:'Henoy ao amin’ny TOJO MUSIC: '+title}).catch(()=>{});else alert('Azonao zaraina ny lohateny: '+title);}
+document.getElementById('uploadForm').addEventListener('submit',e=>{e.preventDefault();const title=document.getElementById('songTitle').value.trim(),artist=document.getElementById('artistName').value.trim(),file=document.getElementById('mediaFile').files[0],type=document.getElementById('fileType').value;const card=document.createElement('article');card.className='card';const cover=document.createElement('div');cover.className='cover';cover.textContent=type==='video'?'🎬':'🎵';const h=document.createElement('h3');h.textContent=title;const a=document.createElement('div');a.className='artist';a.textContent=artist+' • Demo';card.append(cover,h,a);if(file){const p=document.createElement('p');p.className='muted';p.textContent='Rakitra voafidy: '+file.name+' ('+Math.round(file.size/1024)+' KB)';card.append(p)}document.getElementById('tracks').prepend(card);document.getElementById('uploadMessage').textContent='Nampidirina tao amin’ny preview ilay hira. Tsy mbola tafakatra amin’ny Internet ilay rakitra.';e.target.reset();});
+</script>
+</body></html>
